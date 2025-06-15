@@ -244,7 +244,7 @@ section h2 {
 /* About Section */
 .about {
     padding: 6rem 0;
-    background: var(--bg-color);
+    background-color: var(--secondary-color);
     text-align: center;
 }
 
