@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="{{ '/galaxy.js' | relative_url }}"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -31,28 +33,39 @@
         </div>
     </nav>
 
-    <!-- Blog Post Content -->
-    <article class="post">
-        <div class="container">
-            <div class="post-header">
-                <h1 class="post-title">{{ page.title }}</h1>
-                <div class="post-meta">
-                    <span class="post-date"><i class="far fa-calendar"></i> {{ page.date | date: "%B %d, %Y" }}</span>
-                    {% if page.categories %}
-                    <span class="post-categories">
-                        <i class="far fa-folder"></i>
-                        {% for category in page.categories %}
-                        <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}" class="category">{{ category }}</a>
-                        {% endfor %}
-                    </span>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="post-content">
-                {{ content }}
-            </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="hero-content">
+            <h1>Blog</h1>
+            <p>Thoughts, insights, and technical articles</p>
         </div>
-    </article>
+    </section>
+
+    <!-- Blog Post Content -->
+    <section class="blog-section">
+        <div class="container">
+            <article class="post">
+                <header class="post-header">
+                    <h1 class="post-title">{{ page.title }}</h1>
+                    <div class="post-meta">
+                        <span class="date"><i class="far fa-calendar"></i> {{ page.date | date: "%B %d, %Y" }}</span>
+                        {% if page.categories %}
+                        <div class="post-categories">
+                            {% for category in page.categories %}
+                            <a href="{{ '/blog/categories/' | append: category | relative_url }}">{{ category }}</a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </header>
+                <div class="post-content">
+                    {{ content }}
+                </div>
+            </article>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -88,7 +101,7 @@
                         <li><a href="{{ '/#services' | relative_url }}">Services</a></li>
                         <li><a href="{{ '/#skills' | relative_url }}">Skills</a></li>
                         <li><a href="{{ '/#projects' | relative_url }}">Projects</a></li>
-                        <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
+                        <li><a href="{{ '/#blogs' | relative_url }}">Blogs</a></li>
                     </ul>
                 </div>
             </div>
