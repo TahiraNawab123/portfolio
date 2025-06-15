@@ -250,6 +250,7 @@ section h2 {
 
 .timeline {
     position: relative;
+    padding-left: 2rem;
 }
 
 .timeline::before {
@@ -263,9 +264,9 @@ section h2 {
 }
 
 .timeline-item {
-    padding-left: 2rem;
     position: relative;
     margin-bottom: 2rem;
+    padding-left: 2rem;
 }
 
 .timeline-item::before {
@@ -277,6 +278,30 @@ section h2 {
     height: 10px;
     border-radius: 50%;
     background-color: var(--highlight-color);
+}
+
+.timeline-item h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.timeline-content {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.timeline-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--highlight-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.timeline-link:hover {
+    transform: translateX(5px);
+    color: var(--accent-color);
 }
 
 /* Services Section */
@@ -565,13 +590,43 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-    text-align: left;
+    padding: 0 2rem;
 }
 
 .footer-section {
     padding: 0 1rem;
+}
+
+.inspiration-text {
+    text-align: left;
+    max-width: 400px;
+}
+
+.inspiration-text h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #fff, #a8a8a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inspiration-text p {
+    color: #fff;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .footer-section h3 {
@@ -581,8 +636,17 @@ footer {
     font-weight: 500;
 }
 
+.footer-section:nth-child(2) {
+    text-align: center;
+}
+
+.footer-section:last-child {
+    text-align: right;
+}
+
 .social-links {
     display: flex;
+    justify-content: center;
     gap: 1.5rem;
     margin-top: 1rem;
 }
@@ -591,9 +655,9 @@ footer {
     color: #fff;
     font-size: 1.5rem;
     transition: all 0.3s ease;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
 }
 
 .social-icon:hover {
@@ -604,7 +668,7 @@ footer {
 .footer-section ul {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
+    margin: 0;
 }
 
 .footer-section ul li {
@@ -615,20 +679,12 @@ footer {
     color: #fff;
     text-decoration: none;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    display: inline-block;
 }
 
 .footer-section ul li a:hover {
     color: #6a6aaa;
-    padding-left: 5px;
-}
-
-.footer-section .connect-text {
-    color: #fff;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    transform: translateX(5px);
 }
 
 .footer-bottom {
@@ -694,6 +750,23 @@ footer {
 
     .hero-content h1 {
         font-size: 2.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-section {
+        text-align: center !important;
+    }
+
+    .inspiration-text {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 }
 
