@@ -1,45 +1,103 @@
----
-layout: default
----
-<article class="post">
-    <div class="container">
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <div class="post-meta">
-                <span class="read-time">{{ page.read_time }}</span>
-                <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
-            </div>
-            {% if page.tags %}
-            <div class="post-tags">
-                {% for tag in page.tags %}
-                <span class="tag">{{ tag }}</span>
-                {% endfor %}
-            </div>
-            {% endif %}
-            {% if page.categories %}
-            <div class="post-categories">
-                {% for category in page.categories %}
-                <span class="category">{{ category }}</span>
-                {% endfor %}
-            </div>
-            {% endif %}
-        </header>
-
-        <div class="post-content">
-            {{ content }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Tahira Nawab</title>
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1>Tahira Nawab</h1>
+            <p class="tagline">Dedicated to building a better Pakistan through innovation, compassion, and code.</p>
         </div>
-
-        <div class="post-navigation">
-            {% if page.previous.url %}
-            <a href="{{ page.previous.url }}" class="prev-post">
-                ← {{ page.previous.title }}
-            </a>
-            {% endif %}
-            {% if page.next.url %}
-            <a href="{{ page.next.url }}" class="next-post">
-                {{ page.next.title }} →
-            </a>
-            {% endif %}
+        <div class="nav-links">
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/#about' | relative_url }}">About</a>
+            <a href="{{ '/#services' | relative_url }}">Services</a>
+            <a href="{{ '/#skills' | relative_url }}">Skills & Interests</a>
+            <a href="{{ '/projects.html' | relative_url }}">Projects</a>
+            <a href="{{ '/blog.html' | relative_url }}" class="active">Blog</a>
+            <a href="{{ '/#contact' | relative_url }}">Contact</a>
         </div>
-    </div>
-</article> 
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <article class="post">
+        <div class="container">
+            <div class="post-header">
+                <h1 class="post-title">{{ page.title }}</h1>
+                <div class="post-meta">
+                    <span class="post-date"><i class="far fa-calendar"></i> {{ page.date | date: "%B %d, %Y" }}</span>
+                    {% if page.categories %}
+                    <span class="post-categories">
+                        <i class="far fa-folder"></i>
+                        {% for category in page.categories %}
+                        <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}" class="category">{{ category }}</a>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="post-content">
+                {{ content }}
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-hero">
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="inspiration-text">
+                        <h2>Let's Create Something Amazing Together</h2>
+                        <p>Ready to bring your ideas to life? Let's connect and make it happen!</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Let's Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/TahiraNawab123" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/TahiraDev" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tahira-nawab" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{{ '/#home' | relative_url }}">Home</a></li>
+                        <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+                        <li><a href="{{ '/#services' | relative_url }}">Services</a></li>
+                        <li><a href="{{ '/#skills' | relative_url }}">Skills</a></li>
+                        <li><a href="{{ '/#projects' | relative_url }}">Projects</a></li>
+                        <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tahira Nawab | All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    <script src="{{ '/script.js' | relative_url }}"></script>
+</body>
+</html> 
