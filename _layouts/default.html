@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/about' | relative_url }}">About</a></li>
+            <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+        </ul>
+    </nav>
     {{ content }}
     <script src="{{ '/script.js' | relative_url }}"></script>
     <script src="{{ '/galaxy.js' | relative_url }}"></script>
