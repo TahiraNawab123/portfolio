@@ -5,13 +5,13 @@ url: "https://tahiranawab123.github.io"
 
 # Build settings
 markdown: kramdown
-permalink: /blog/:title/
+permalink: /blog/:year/:title/
 
 # Collections
 collections:
   posts:
     output: true
-    permalink: /blog/:title/
+    permalink: /blog/:year/:title/
 
 # Default front matter
 defaults:
@@ -20,7 +20,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Tahira Nawab"
       comments: true
 
 # Include files

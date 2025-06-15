@@ -1318,7 +1318,7 @@ section:hover::before {
     color: var(--highlight-color);
 }
 
-/* Blog Post Styles */
+/* Post Styles */
 .post {
     max-width: 800px;
     margin: 0 auto;
@@ -1337,36 +1337,29 @@ section:hover::before {
 }
 
 .post-meta {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
     margin-bottom: 1rem;
     color: #718096;
     font-size: 0.9rem;
 }
 
-.read-time {
-    font-weight: 500;
-}
-
-.post-date {
-    color: #718096;
-}
-
-.post-tags, .post-categories {
+.post-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
-.tag, .category {
+.year, .tag, .category {
     background: #edf2f7;
     color: #4a5568;
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     font-size: 0.875rem;
     transition: all 0.2s;
+}
+
+.year {
+    font-weight: 500;
 }
 
 .tag:hover, .category:hover {
