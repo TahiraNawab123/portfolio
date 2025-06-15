@@ -67,11 +67,5 @@ A modern, responsive portfolio website showcasing Tahira Nawab's skills, project
 
 ## Feedback
 
-Have feedback or suggestions? Feel free to reach out — your thoughts are always welcome!
+Have feedback or suggestions? Feel free to reach out, your thoughts are always welcome!
 
-
-## Contact
-
-Email: - [tahira.nawab.dev@gmail.com](mailto:tahira.nawab.dev@gmail.com)
-
-Project Link: [https://github.com/Tahira_Nawab123/portfolio](https://github.com/Tahira_Nawab123/portfolio)
