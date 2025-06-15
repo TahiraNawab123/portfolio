@@ -31,7 +31,7 @@ include:
   - galaxy.js
   - index.html
   - projects.html
-  - blogs.html
+  - blog.html
 
 # Exclude from processing
 exclude:
