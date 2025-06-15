@@ -51,26 +51,26 @@ layout: default
         <div class="container">
             <h2>Latest Articles</h2>
             <div class="blogs-grid">
+                {% for post in site.posts %}
                 <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="assets/blog-placeholder.jpg" alt="Blog Post Image">
-                    </div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span class="date"><i class="far fa-calendar"></i> March 15, 2024</span>
-                            <span class="category"><i class="far fa-folder"></i> Technology</span>
+                            <span class="date"><i class="far fa-calendar"></i> {{ post.date | date: "%B %d, %Y" }}</span>
+                            {% if post.categories %}
+                            <span class="category"><i class="far fa-folder"></i> {{ post.categories | first }}</span>
+                            {% endif %}
                         </div>
-                        <h3>Getting Started with Web Development</h3>
-                        <p>Web development is an exciting field that combines creativity with technical skills. Learn the fundamental concepts and tools you need to begin your journey.</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                        <a href="{{ post.url | relative_url }}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-                <!-- Add more blog cards here -->
+                {% endfor %}
             </div>
         </div>
     </section>
 
-      <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="footer-hero">
             <div class="stars"></div>
@@ -99,12 +99,12 @@ layout: default
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#blogs">Blogs</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#skills">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
                     </ul>
                 </div>
             </div>
