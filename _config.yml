@@ -20,6 +20,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      author: "Tahira Nawab"
+      comments: true
 
 # Include files
 include:

@@ -1,1 +1,45 @@
- 
+---
+layout: default
+---
+<article class="post">
+    <div class="container">
+        <header class="post-header">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="post-meta">
+                <span class="read-time">{{ page.read_time }}</span>
+                <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+            </div>
+            {% if page.tags %}
+            <div class="post-tags">
+                {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if page.categories %}
+            <div class="post-categories">
+                {% for category in page.categories %}
+                <span class="category">{{ category }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </header>
+
+        <div class="post-content">
+            {{ content }}
+        </div>
+
+        <div class="post-navigation">
+            {% if page.previous.url %}
+            <a href="{{ page.previous.url }}" class="prev-post">
+                ← {{ page.previous.title }}
+            </a>
+            {% endif %}
+            {% if page.next.url %}
+            <a href="{{ page.next.url }}" class="next-post">
+                {{ page.next.title }} →
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</article> 
