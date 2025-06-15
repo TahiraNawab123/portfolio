@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahira Nawab - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="galaxy.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1>Tahira Nawab</h1>
+            <p class="tagline">Dedicated to building a better Pakistan through innovation, compassion, and code.</p>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills & Interests</a>
+            <a href="projects.html">Projects</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Software Engineering Student | Developer | Innovator</p>
+            <a href="#contact" class="cta-button">Let's Work Together</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="intro">
+                <p>I am a passionate Software Engineering student at ITU, Lahore, dedicated to serving my country through innovative digital solutions and impactful ideas.</p>
+            </div>
+            <div class="education">
+                <h3>Education</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>BS Software Engineering</h4>
+                        <p>Information Technology University (ITU), Lahore | 2023 – Present</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Intermediate – Pre-Engineering</h4>
+                        <p>Punjab Group of Colleges | 2021 – 2023</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Matric – Computer Science</h4>
+                        <p>LDA School System | 2019 – 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Designing</h3>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-pen-fancy"></i>
+                <h3>Content Writing</h3>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-video"></i>
+                <h3>Video Editing</h3>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Entrance Test Mentoring & Guidance</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills & Interests</h2>
+        <div class="skills-container">
+            <div class="skills-tabs">
+                <button class="tab-btn active" data-tab="technical">Technical Skills</button>
+                <button class="tab-btn" data-tab="soft">Soft Skills</button>
+                <button class="tab-btn" data-tab="interests">Personal Interests</button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="technical">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Programming</h4>
+                            <p>C++, Python, Java, HTML, CSS, Git & GitHub, CLI, VS Code</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Cloud & DevOps</h4>
+                            <p>AWS Cloud Practitioner (Certified), Microsoft Azure (Learning Path)</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>UI/UX Tools</h4>
+                            <p>Figma (Basic), Responsive Design, Accessibility Standards, Canva(Expert)</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Other Skills</h4>
+                            <p>Prompt Engineering & AI Tools, CMS and SEO, Web Content Writing, UI Copywriting</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="soft">
+                    <ul class="skills-list">
+                        <li>Strong communication and presentation skills</li>
+                        <li>Effective team collaboration and leadership</li>
+                        <li>Rapid learning and adaptability</li>
+                        <li>Strategic thinking and problem-solving</li>
+                        <li>Creative writing and detail-oriented mindset</li>
+                        <li>Ownership and initiative in all projects</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="interests">
+                    <ul class="skills-list">
+                        <li>Book reading & learning psychology</li>
+                        <li>Hiking, nature walks, and outdoor activities</li>
+                        <li>Gaming</li>
+                        <li>Public speaking & motivational mentoring</li>
+                        <li>Volunteering & social impact work</li>
+                        <li>Exploring new tech trends and AI tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-hero">
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+            <div class="footer-hero-content">
+                <h2>Let's Create Something Amazing Together</h2>
+                <p>Ready to bring your ideas to life? Let's connect and make it happen!</p>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Connect With Me</h3>
+                <div class="social-links">
+                    <a href="mailto:tahira.nawab.dev@gmail.com" class="social-icon" title="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span class="tooltip">Email Me</span>
+                    </a>
+                    <a href="https://linkedin.com/in/tahira-nawab" target="_blank" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="tooltip">Connect on LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Tahira_Nawab123" target="_blank" class="social-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="tooltip">Follow on GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tahira Nawab | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

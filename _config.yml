@@ -1,0 +1,35 @@
+title: Portfolio
+description: Personal portfolio and blog
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude from processing
+exclude:
+  - node_modules
+  - vendor
+  - .git
+  - .github
+  - assets
+  - styles.css
+  - script.js
+  - index.html
+  - projects.html
+  - blogs.html 

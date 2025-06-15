@@ -1,46 +1,101 @@
-# Getting Started with Create React App
+# Tahira Nawab's Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website showcasing Tahira Nawab's skills, projects, and professional journey. Built with HTML, CSS, and JavaScript.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🎨 Modern and clean design with dark theme
+- 📱 Fully responsive layout for all devices
+- ⚡ Smooth animations and transitions
+- 🎯 Interactive UI elements
+- 📝 Detailed sections for skills, projects, and experience
+- 🔍 SEO-friendly structure
+- 🚀 Fast loading and optimized performance
 
-### `npm start`
+## Sections
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Navigation Bar**
+   - Logo/Name
+   - Tagline
+   - Responsive menu
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. **About**
+   - Introduction
+   - Education timeline
 
-### `npm test`
+3. **Services**
+   - Web Development
+   - UI/UX Designing
+   - Content Writing
+   - Video Editing
+   - Entrance Test Mentoring
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Skills & Interests**
+   - Technical Skills
+   - Soft Skills
+   - Personal Interests
 
-### `npm run build`
+5. **Projects**
+   - Project cards with thumbnails
+   - Project descriptions
+   - Status tags
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. **Blogs**
+   - Blog cards
+   - Featured images
+   - Read more functionality
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+7. **Contact**
+   - Social media links
+   - Email contact
+   - Professional profiles
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- HTML5
+- CSS3 (with CSS Variables)
+- JavaScript (ES6+)
+- Font Awesome Icons
+- Google Fonts (Poppins)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Setup and Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Tahira_Nawab123/portfolio.git
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Navigate to the project directory:
+   ```bash
+   cd portfolio
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Open `index.html` in your browser or use a local server.
 
-## Learn More
+## Customization
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Colors can be modified in the CSS variables (in `styles.css`)
+- Content can be updated in `index.html`
+- Animations and interactions can be adjusted in `script.js`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Opera (latest)
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+Tahira Nawab - [tahira.nawab.dev@gmail.com](mailto:tahira.nawab.dev@gmail.com)
+
+Project Link: [https://github.com/Tahira_Nawab123/portfolio](https://github.com/Tahira_Nawab123/portfolio)
