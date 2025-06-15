@@ -242,70 +242,42 @@ section h2 {
 }
 
 /* About Section */
+.about {
+    padding: 5rem 0;
+    background: var(--bg-color);
+}
+
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.timeline {
-    position: relative;
-    padding-left: 2rem;
+.about-text {
+    color: var(--text-primary);
+    line-height: 1.8;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background-color: var(--highlight-color);
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
 }
 
-.timeline-item {
-    position: relative;
-    padding-left: 2rem;
-    margin-bottom: 3rem;
-}
-
-.timeline-item:last-child {
+.about-text p:last-child {
     margin-bottom: 0;
 }
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -6px;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--highlight-color);
-}
-
-.timeline-item h4 {
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.timeline-content {
-    color: var(--text-color);
-    opacity: 0.8;
-}
-
-.timeline-link {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: var(--highlight-color);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.timeline-link:hover {
-    transform: translateX(5px);
-    color: var(--accent-color);
+@media (max-width: 768px) {
+    .about-content {
+        padding: 1.5rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
 }
 
 /* Services Section */
