@@ -265,8 +265,12 @@ section h2 {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 2rem;
     padding-left: 2rem;
+    margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
 }
 
 .timeline-item::before {
@@ -346,6 +350,17 @@ section h2 {
     margin-bottom: 2rem;
 }
 
+.tab-pane {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tab-pane.active {
+    display: block;
+    opacity: 1;
+}
+
 .tab-btn {
     padding: 0.8rem 1.5rem;
     background: none;
@@ -353,23 +368,18 @@ section h2 {
     color: var(--text-color);
     cursor: pointer;
     font-weight: 500;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
+    position: relative;
 }
 
-.tab-btn.active,
 .tab-btn:hover {
     color: var(--highlight-color);
+}
+
+.tab-btn.active {
+    color: var(--highlight-color);
     border-bottom-color: var(--highlight-color);
-}
-
-.tab-pane {
-    display: none;
-}
-
-.tab-pane.active {
-    display: block;
-    animation: fadeIn 0.5s ease;
 }
 
 .skills-grid {
@@ -386,12 +396,19 @@ section h2 {
 
 .skills-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .skills-list li {
-    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
     padding-left: 1.5rem;
     position: relative;
+    line-height: 1.6;
 }
 
 .skills-list li::before {
@@ -399,6 +416,7 @@ section h2 {
     position: absolute;
     left: 0;
     color: var(--highlight-color);
+    font-size: 1.2rem;
 }
 
 /* Projects Section */
@@ -1220,4 +1238,15 @@ section:hover::before {
     color: #333333;
     margin-bottom: 40px;
     text-align: center;
+}
+
+.social-link {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--highlight-color);
 } 

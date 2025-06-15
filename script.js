@@ -55,20 +55,45 @@ window.addEventListener('scroll', () => {
 });
 
 // Skills tabs functionality
-const tabBtns = document.querySelectorAll('.tab-btn');
-const tabPanes = document.querySelectorAll('.tab-pane');
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all tab buttons and content panes
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
 
-tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // Remove active class from all buttons and panes
-        tabBtns.forEach(b => b.classList.remove('active'));
-        tabPanes.forEach(p => p.classList.remove('active'));
+    // Function to switch tabs
+    function switchTab(tabId) {
+        // Hide all tab panes
+        tabPanes.forEach(pane => {
+            pane.style.display = 'none';
+            pane.classList.remove('active');
+        });
 
-        // Add active class to clicked button and corresponding pane
-        btn.classList.add('active');
-        const tabId = btn.getAttribute('data-tab');
-        document.getElementById(tabId).classList.add('active');
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Show selected tab pane and activate button
+        const selectedPane = document.getElementById(tabId);
+        const selectedButton = document.querySelector(`[data-tab="${tabId}"]`);
+
+        if (selectedPane && selectedButton) {
+            selectedPane.style.display = 'block';
+            selectedPane.classList.add('active');
+            selectedButton.classList.add('active');
+        }
+    }
+
+    // Add click event to each tab button
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+            switchTab(tabId);
+        });
     });
+
+    // Initialize with first tab
+    switchTab('technical-skills');
 });
 
 // Intersection Observer for subtle fade-in animations
