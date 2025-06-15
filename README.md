@@ -48,8 +48,7 @@ A modern, responsive portfolio website showcasing Tahira Nawab's skills, project
 7. **Contact**
    - Social media links
    - Email contact
-   - Professional profiles
-
+   - 
 ## Technologies Used
 
 - HTML5
@@ -57,26 +56,6 @@ A modern, responsive portfolio website showcasing Tahira Nawab's skills, project
 - JavaScript (ES6+)
 - Font Awesome Icons
 - Google Fonts (Poppins)
-
-## Setup and Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Tahira_Nawab123/portfolio.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd portfolio
-   ```
-
-3. Open `index.html` in your browser or use a local server.
-
-## Customization
-
-- Colors can be modified in the CSS variables (in `styles.css`)
-- Content can be updated in `index.html`
-- Animations and interactions can be adjusted in `script.js`
 
 ## Browser Support
 
@@ -86,16 +65,13 @@ A modern, responsive portfolio website showcasing Tahira Nawab's skills, project
 - Edge (latest)
 - Opera (latest)
 
-## Contributing
+## Feedback
 
-Feel free to submit issues and enhancement requests!
+Have feedback or suggestions? Feel free to reach out — your thoughts are always welcome!
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
 
-Tahira Nawab - [tahira.nawab.dev@gmail.com](mailto:tahira.nawab.dev@gmail.com)
+Email: - [tahira.nawab.dev@gmail.com](mailto:tahira.nawab.dev@gmail.com)
 
 Project Link: [https://github.com/Tahira_Nawab123/portfolio](https://github.com/Tahira_Nawab123/portfolio)
