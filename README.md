@@ -67,5 +67,5 @@ A modern, responsive portfolio website showcasing Tahira Nawab's skills, project
 
 ## Feedback
 
-Have feedback or suggestions? Feel free to reach out — your thoughts are always welcome!
+Have feedback or suggestions? Feel free to reach out, your thoughts are always welcome!
 
