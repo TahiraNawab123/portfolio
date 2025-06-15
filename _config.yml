@@ -1,0 +1,39 @@
+title: Tahira Nawab
+description: Personal Portfolio and Blog
+baseurl: "/portfolio"
+url: "https://tahiranawab123.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Include files
+include:
+  - assets
+  - styles.css
+  - script.js
+  - galaxy.js
+  - index.html
+  - projects.html
+  - blogs.html
+
+# Exclude from processing
+exclude:
+  - node_modules
+  - vendor
+  - .git
+  - .github 
