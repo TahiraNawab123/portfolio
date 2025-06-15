@@ -1453,33 +1453,41 @@ section:hover::before {
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
     margin-top: 2rem;
 }
 
 .blog-card {
     background: var(--secondary-color);
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .blog-content {
-    padding: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .blog-meta {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
     font-size: 0.9rem;
     color: var(--text-color);
+    opacity: 0.8;
 }
 
 .blog-meta span {
@@ -1490,135 +1498,74 @@ section:hover::before {
 
 .blog-meta i {
     color: var(--accent-color);
+    font-size: 1rem;
 }
 
 .blog-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
     color: var(--text-color);
+    line-height: 1.4;
 }
 
 .blog-card p {
     color: var(--text-color);
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    flex-grow: 1;
 }
 
-.read-more {
+.read-more-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
     color: var(--accent-color);
     text-decoration: none;
     font-weight: 500;
-    transition: gap 0.3s ease;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    align-self: flex-start;
 }
 
-.read-more:hover {
-    gap: 0.8rem;
+.read-more-btn:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    transform: translateX(5px);
 }
 
-.read-more i {
+.read-more-btn i {
     font-size: 0.9rem;
+    transition: transform 0.3s ease;
 }
 
-/* Blog Post Layout Styles */
-.post {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: var(--secondary-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.post-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.post-title {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-}
-
-.post-meta {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    color: var(--text-color);
-    font-size: 0.9rem;
-}
-
-.post-categories {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.post-categories a {
-    color: var(--accent-color);
-    text-decoration: none;
-    padding: 0.2rem 0.8rem;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    transition: background 0.3s ease;
-}
-
-.post-categories a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.post-content {
-    color: var(--text-color);
-    line-height: 1.8;
-}
-
-.post-content h2 {
-    font-size: 1.8rem;
-    margin: 2rem 0 1rem;
-    color: var(--text-color);
-}
-
-.post-content p {
-    margin-bottom: 1.5rem;
-}
-
-.post-content ul, .post-content ol {
-    margin-bottom: 1.5rem;
-    padding-left: 2rem;
-}
-
-.post-content li {
-    margin-bottom: 0.5rem;
-}
-
-.post-content a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.post-content a:hover {
-    color: var(--accent-color-hover);
+.read-more-btn:hover i {
+    transform: translateX(3px);
 }
 
 @media (max-width: 768px) {
     .blog-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
-    .post {
+    .blog-card {
+        max-width: 100%;
+    }
+    
+    .blog-content {
         padding: 1.5rem;
     }
     
-    .post-title {
-        font-size: 2rem;
-    }
-    
-    .post-meta {
+    .blog-meta {
         flex-direction: column;
         gap: 0.5rem;
-        align-items: center;
+    }
+    
+    .read-more-btn {
+        width: 100%;
+        justify-content: center;
     }
 } 
