@@ -694,6 +694,7 @@ footer {
     position: relative;
     padding: 4rem 2rem;
     overflow: hidden;
+    background-color: #000;
 }
 
 .footer-content {
@@ -977,6 +978,8 @@ footer {
 .blogs-page {
     min-height: 100vh;
     padding-top: 100px;
+    background-color: rgba(255, 255, 255, 0.05); /*  Light translucent background */
+    backdrop-filter: blur(4px); /*  Optional glass effect */
 }
 
 .blog-card {
@@ -988,7 +991,7 @@ footer {
 
 .blog-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(37, 44, 85, 0.3);
 }
 
 .blog-image {
@@ -1012,6 +1015,11 @@ footer {
 
 .blog-content {
     padding: 1.5rem;
+}
+.blog-section {
+    background-color:  #c5c260;  /* Transparent white background */
+    padding: 60px 0;
+    backdrop-filter: blur(5px); /* Optional for a dreamy soft effect */
 }
 
 .blog-meta {
@@ -1137,6 +1145,55 @@ footer {
     font-size: 1.1rem;
     opacity: 0.8;
 }
+
+/* Galaxy Background for Blog Post Pages (matches footer style) */
+.galaxy-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    background-image: 
+      radial-gradient(1px 1px at 20% 30%, white, transparent),
+      radial-gradient(1px 1px at 40% 60%, white, transparent),
+      radial-gradient(1px 1px at 70% 80%, white, transparent),
+      radial-gradient(1px 1px at 25% 75%, white, transparent),
+      radial-gradient(1px 1px at 85% 20%, white, transparent);
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+  
+  .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: 
+      radial-gradient(1px 1px at 10% 20%, white, transparent),
+      radial-gradient(1px 1px at 50% 50%, white, transparent),
+      radial-gradient(1px 1px at 80% 70%, white, transparent);
+    animation: twinkle 6s ease-in-out infinite;
+    z-index: -10;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+  
 
 /* Enhanced Social Icons */
 .social-links {
@@ -1308,6 +1365,23 @@ section:hover::before {
 
 .blog-card:hover::before {
     opacity: 1;
+}
+
+.background-animations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Make sure it's behind all content */
+    pointer-events: none; /* So user can click through */
+}
+
+.stars, .twinkling {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
 }
 
 /* Galaxy Animation Container */
