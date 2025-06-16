@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Exploring Information Technology University (ITU), Lahore: Pakistan's Rising Tech Beacon"
-date: 2024-03-21
-read_time: 8 min read
+title: "Can ITU Compete with the Best? A Deep Dive into Pakistan's Rising Tech University"
+date: 2025-06-15
+read_time: 5 min read
 tags: [education, technology, pakistan, universities, innovation]
 categories: [education, technology]
 ---
@@ -19,6 +19,7 @@ ITU houses four main faculties: Humanities & Social Sciences, Business & Managem
 
 ### Undergraduate Degrees
 - BS in Computer Science
+- BS in Software Engineering 
 - BS in Computer Engineering
 - BS in Electrical Engineering
 - BS in Economics with Data Science
